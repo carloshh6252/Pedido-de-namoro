@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bastidores 💫</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="bastidores-titulo">Bastidores ✨</h1>
+  <p class="bastidores-sub">Aqui estão alguns momentos e preparações especiais 💕</p>
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="img/foto1.jpg" alt="Momento especial 1" />
+      <p class="caption">Montando o site! 💖</p>
+    </div>
+
+    <div class="photo">
+      <img src="img/foto2.jpg" alt="Momento especial 2" />
+      <p class="caption">O presente mais querido, você! ✨</p>
+    </div>
+
+    <div class="photo">
+      <img src="img/foto3.jpg" alt="Momento especial 3" />
+      <p class="caption">As flores! 🌸</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="voltar-btn" title="Voltar ao início">🏠 Voltar ao Início</a>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("falling-heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 400);
+  </script>
+
+</body>
+</html>
